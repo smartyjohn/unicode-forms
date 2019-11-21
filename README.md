@@ -38,3 +38,13 @@ x:4E 6F 72 64 CCA9 6E 20 4E 61 CC88 73 20 41 CC8A 6D 61 CC8A 6C 20 56 61 CC88 73
 
 A string may be passed as an argument, or "--" may be passed to read STDIN.
 
+A compiled binary can be created in the usual Go way:
+```
+go build -o unicode_forms main.go
+```
+
+An example of viewing a file line-by-line:
+```
+cat main.go | workspace/unicode_forms -- | less
+```
+
