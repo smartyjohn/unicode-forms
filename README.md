@@ -3,7 +3,7 @@ Output command line input into various unicode normalization forms.
 
 # Usage
 
-Simply run the Go program for an example output.
+Simply run the Go program for an example output.  In the columnized output, (i) is the input, (u) is the unicode code point in hexidecimal, and (x) is the utf-8 encoded bytes.
 
 ```
 $ go run main.go
@@ -42,7 +42,12 @@ A compiled binary can be created in the usual Go way:
 $ go build -o unicode_forms main.go
 ```
 
-An example of viewing a file line-by-line:
+Example of using command line arguments:
+```
+$ ./unicode_forms 'El pingüino hizo kilómetros bajo frío y añoraba a su querido.'
+```
+
+Example of viewing a file line-by-line:
 ```
 $ cat main.go | ./unicode_forms -- | less
 ```
