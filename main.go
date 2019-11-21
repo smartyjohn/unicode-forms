@@ -12,8 +12,8 @@ import (
 func main() {
 	args := os.Args[1:]
 	if len(args) == 0 {
-		out("[NOTE] No arguments given, using example data.\n[NOTE]To read stdin pass '--' as the argument\n")
-		args = append(args, "Nord̩n 4² Näs Åmål Västra Mêléé - 가구")
+		out("[NOTE] No arguments given, using example data.\n[NOTE] To read stdin pass '--' as the argument\n")
+		args = append(args, "Nord̩n 4² Näs Åmål Västra Mêléé 가구")
 	}
 
 	for _, a := range args {
@@ -84,7 +84,7 @@ func decodeUTF8(input []byte) (in, cp, hex []byte) {
 
 		width := fmt.Sprintf("%d", size<<1)
 		in = append(in, []byte(fmt.Sprintf("%"+width+"s", cur))...)
-		cp = append(cp, []byte(fmt.Sprintf("%0"+width+"X", r))...)
+		cp = append(cp, []byte(fmt.Sprintf("%"+width+"X", r))...)
 		hex = append(hex, []byte(fmt.Sprintf("%"+width+"X", cur))...)
 	}
 	return
