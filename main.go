@@ -13,7 +13,7 @@ func main() {
 	args := os.Args[1:]
 	if len(args) == 0 {
 		out("[NOTE] No arguments given, using example data.\n[NOTE]To read stdin pass '--' as the argument\n")
-		args = append(args, "Nord̩n Näs Åmål Västra Mêléé - 가구")
+		args = append(args, "Nord̩n 4² Näs Åmål Västra Mêléé - 가구")
 	}
 
 	for _, a := range args {
